@@ -1,4 +1,4 @@
-const apiId = 'kvekf5wqsk'
+const apiId = 'fjn1ms0w1j'
 const region = 'eu-west-1'
 export const apiEndpoint = `https://${apiId}.execute-api.${region}.amazonaws.com/dev`
 
