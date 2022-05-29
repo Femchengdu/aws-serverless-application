@@ -25,7 +25,8 @@ export const createTodo = async (newTodo: CreateTodoRequest, userId: string) => 
     } as TodoItem
 
     // returns a promise
-    return await TodosAccess(newTodoObj)
+    await TodosAccess(newTodoObj)
+    return todoId
 }
 
 
