@@ -14,12 +14,13 @@ const createdAtIndex = process.env.TODOS_CAT_INDEX
 // TODO: Implement the dataLayer logic
 
 export const TodosAccess = async (todo: TodoItem) => {
+    const params = {
+        TableName: todosTable,
+        Item: todo
+    }
     try {
 
-        return await docClient.put({
-            TableName: todosTable,
-            Item: todo
-        }).promise()
+        return await docClient.put(params).promise()
     } catch (error) {
         logger.error('Create todo error, check env for table name!', { error })
 
